@@ -7,7 +7,7 @@
         "pitch": 56,
         "event_offset_sec": 0.6499999999999999,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": -5.914680735535509,
+          "score_reattack_adaptive_attack": -6.56732504724137,
           "stable_shared_bin": 3.4250126482896084,
           "score_reattack_s090": -4.762300152819552
         },
@@ -22,7 +22,7 @@
         "pitch": 44,
         "event_offset_sec": 0.6499999999999999,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": 10.377525491411188,
+          "score_reattack_adaptive_attack": 10.655561315429258,
           "stable_shared_bin": 9.311250496010036,
           "score_reattack_s090": 9.311250496010036
         },
