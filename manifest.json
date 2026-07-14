@@ -1,0 +1,132 @@
+{
+  "schema": "dna_maestro_real_qualitative_v1",
+  "maestro_root": "/depot/yunglu/data/datasets_ben/maestro/maestro-v3.0.0",
+  "selection": {
+    "split": "validation",
+    "max_reattack_gap_sec": 0.08,
+    "max_reattack_overlap_sec": 0.03,
+    "max_local_notes": 40,
+    "min_reattack_velocity": 25,
+    "before_sec": 1.75,
+    "after_sec": 2.75
+  },
+  "cases": [
+    {
+      "case_id": "case_01_2015_p44",
+      "split": "validation",
+      "year": 2015,
+      "composer": "Franz Liszt",
+      "title": "Hungarian Rhapsody No. 2 in C-sharp Minor, S. 244/2",
+      "source_audio": "/depot/yunglu/data/datasets_ben/maestro/maestro-v3.0.0/2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_03_R1_2015_wav--4.wav",
+      "source_midi": "/depot/yunglu/data/datasets_ben/maestro/maestro-v3.0.0/2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_03_R1_2015_wav--4.midi",
+      "crop_start_sec": 19.334375000000016,
+      "crop_end_sec": 23.834375000000016,
+      "sample_rate": 44100,
+      "frames": 198450,
+      "local_note_count": 13,
+      "reattack_gap_sec": 0.05000000000000071,
+      "stress_time_sec": 1.75,
+      "notes": {
+        "sustained_upper": {
+          "note_index": 4,
+          "pitch": 56,
+          "velocity": 68,
+          "start_sec": 0.490625000000005,
+          "end_sec": 4.5
+        },
+        "reattacking_lower": {
+          "note_index": 8,
+          "pitch": 44,
+          "velocity": 73,
+          "start_sec": 1.75,
+          "end_sec": 4.5
+        },
+        "nearby_control": {
+          "note_index": 9,
+          "pitch": 49,
+          "velocity": 57,
+          "start_sec": 1.7510416666666657,
+          "end_sec": 2.459375000000005
+        }
+      }
+    },
+    {
+      "case_id": "case_02_2008_p49",
+      "split": "validation",
+      "year": 2008,
+      "composer": "Franz Liszt / Vladimir Horowitz",
+      "title": "Hungarian Rhapsody No. 2 (Horowitz Edition)",
+      "source_audio": "/depot/yunglu/data/datasets_ben/maestro/maestro-v3.0.0/2008/MIDI-Unprocessed_09_R2_2008_01-05_ORIG_MID--AUDIO_09_R2_2008_wav--5.wav",
+      "source_midi": "/depot/yunglu/data/datasets_ben/maestro/maestro-v3.0.0/2008/MIDI-Unprocessed_09_R2_2008_01-05_ORIG_MID--AUDIO_09_R2_2008_wav--5.midi",
+      "crop_start_sec": 0.6289062499999996,
+      "crop_end_sec": 5.12890625,
+      "sample_rate": 44100,
+      "frames": 198450,
+      "local_note_count": 16,
+      "reattack_gap_sec": 0.06510416666666696,
+      "stress_time_sec": 1.75,
+      "notes": {
+        "sustained_upper": {
+          "note_index": 2,
+          "pitch": 61,
+          "velocity": 84,
+          "start_sec": 0.2838541666666671,
+          "end_sec": 2.41796875
+        },
+        "reattacking_lower": {
+          "note_index": 8,
+          "pitch": 49,
+          "velocity": 88,
+          "start_sec": 1.75,
+          "end_sec": 1.95703125
+        },
+        "nearby_control": {
+          "note_index": 9,
+          "pitch": 56,
+          "velocity": 56,
+          "start_sec": 1.7526041666666665,
+          "end_sec": 2.30078125
+        }
+      }
+    },
+    {
+      "case_id": "case_03_2011_p56",
+      "split": "validation",
+      "year": 2011,
+      "composer": "Franz Liszt",
+      "title": "Hungarian Rhapsody No. 12, S. 244/12",
+      "source_audio": "/depot/yunglu/data/datasets_ben/maestro/maestro-v3.0.0/2011/MIDI-Unprocessed_03_R1_2011_MID--AUDIO_R1-D1_19_Track19_wav.wav",
+      "source_midi": "/depot/yunglu/data/datasets_ben/maestro/maestro-v3.0.0/2011/MIDI-Unprocessed_03_R1_2011_MID--AUDIO_R1-D1_19_Track19_wav.midi",
+      "crop_start_sec": 268.44921875000125,
+      "crop_end_sec": 272.94921875000125,
+      "sample_rate": 44100,
+      "frames": 198450,
+      "local_note_count": 27,
+      "reattack_gap_sec": 0.07291666666668561,
+      "stress_time_sec": 1.75,
+      "notes": {
+        "sustained_upper": {
+          "note_index": 5,
+          "pitch": 68,
+          "velocity": 95,
+          "start_sec": 0.7981770833333144,
+          "end_sec": 2.0911458333333144
+        },
+        "reattacking_lower": {
+          "note_index": 13,
+          "pitch": 56,
+          "velocity": 76,
+          "start_sec": 1.75,
+          "end_sec": 1.8424479166666288
+        },
+        "nearby_control": {
+          "note_index": 21,
+          "pitch": 52,
+          "velocity": 80,
+          "start_sec": 2.6966145833332575,
+          "end_sec": 3.166666666666515
+        }
+      }
+    }
+  ]
+}

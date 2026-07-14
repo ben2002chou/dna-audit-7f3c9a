@@ -1,59 +1,59 @@
 {
   "variant_order": [
-    "score_reattack_adaptive_attack",
+    "score_reattack_sample_growth",
     "stable_shared_bin",
-    "score_reattack_s090"
+    "score_reattack_adaptive_attack"
   ],
   "cases": {
     "case_01_2015_p44": {
       "sustained_upper": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       },
       "reattacking_lower": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       },
       "nearby_control": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       }
     },
     "case_02_2008_p49": {
       "sustained_upper": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       },
       "reattacking_lower": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       },
       "nearby_control": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       }
     },
     "case_03_2011_p56": {
       "sustained_upper": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       },
       "reattacking_lower": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       },
       "nearby_control": {
-        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "A": "Frame-local onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Score-reattack gate 0.90 to residual"
+        "C": "Adaptive score-reattack ownership with octave aliasing"
       }
     }
   }

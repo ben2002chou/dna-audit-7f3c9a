@@ -7,11 +7,13 @@
         "pitch": 56,
         "event_offset_sec": 0.6499999999999999,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": -6.56732504724137,
+          "score_reattack_sample_growth": -6.56732504724137,
           "stable_shared_bin": 3.4250126482896084,
-          "score_reattack_s090": -4.762300152819552
+          "score_reattack_adaptive_attack": -6.56732504724137
         },
         "candidate_vs_stable_rms_db": -10.706079097590687,
+        "sample_growth_vs_stable_rms_db": -10.706079097590687,
+        "sample_growth_vs_adaptive_rms_db": 0.0,
         "comparison_window_sec": [
           0.6699999999999999,
           1.0499999999999998
@@ -22,11 +24,13 @@
         "pitch": 44,
         "event_offset_sec": 0.6499999999999999,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": 10.655561315429258,
+          "score_reattack_sample_growth": 10.655561315429258,
           "stable_shared_bin": 9.311250496010036,
-          "score_reattack_s090": 9.311250496010036
+          "score_reattack_adaptive_attack": 10.655561315429258
         },
         "candidate_vs_stable_rms_db": 3.587846130352869,
+        "sample_growth_vs_stable_rms_db": 3.587846130352869,
+        "sample_growth_vs_adaptive_rms_db": 0.0,
         "comparison_window_sec": [
           0.6699999999999999,
           1.0499999999999998
@@ -37,11 +41,13 @@
         "pitch": 49,
         "event_offset_sec": 0.17999999999999994,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": 11.229525072587627,
+          "score_reattack_sample_growth": 11.229525072587627,
           "stable_shared_bin": 11.229525072587627,
-          "score_reattack_s090": 11.229525072587627
+          "score_reattack_adaptive_attack": 11.229525072587627
         },
         "candidate_vs_stable_rms_db": 0.0,
+        "sample_growth_vs_stable_rms_db": 0.0,
+        "sample_growth_vs_adaptive_rms_db": 0.0,
         "comparison_window_sec": [
           0.19999999999999993,
           0.58
@@ -54,11 +60,13 @@
         "pitch": 61,
         "event_offset_sec": 0.6499999999999999,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": -1.4532513704684902,
+          "score_reattack_sample_growth": -3.1383706632841024,
           "stable_shared_bin": 1.929762340237209,
-          "score_reattack_s090": 1.929762340237209
+          "score_reattack_adaptive_attack": -1.4532513704684902
         },
         "candidate_vs_stable_rms_db": 0.0,
+        "sample_growth_vs_stable_rms_db": -0.13298125820256992,
+        "sample_growth_vs_adaptive_rms_db": -0.13298125820256992,
         "comparison_window_sec": [
           0.6699999999999999,
           1.0499999999999998
@@ -69,11 +77,13 @@
         "pitch": 49,
         "event_offset_sec": 0.6499999999999999,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": 8.688313293187502,
+          "score_reattack_sample_growth": 9.1583555672415,
           "stable_shared_bin": 8.732810992656109,
-          "score_reattack_s090": 8.732810992656109
+          "score_reattack_adaptive_attack": 8.688313293187502
         },
         "candidate_vs_stable_rms_db": 0.0,
+        "sample_growth_vs_stable_rms_db": 0.22654872336820453,
+        "sample_growth_vs_adaptive_rms_db": 0.22654872336820453,
         "comparison_window_sec": [
           0.6699999999999999,
           1.0499999999999998
@@ -84,11 +94,13 @@
         "pitch": 56,
         "event_offset_sec": 0.17999999999999994,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": 32.17612008193653,
+          "score_reattack_sample_growth": 32.17612008193653,
           "stable_shared_bin": 32.17612008193653,
-          "score_reattack_s090": 32.17612008193653
+          "score_reattack_adaptive_attack": 32.17612008193653
         },
         "candidate_vs_stable_rms_db": 0.0,
+        "sample_growth_vs_stable_rms_db": 0.0,
+        "sample_growth_vs_adaptive_rms_db": 0.0,
         "comparison_window_sec": [
           0.19999999999999993,
           0.58
@@ -101,11 +113,13 @@
         "pitch": 68,
         "event_offset_sec": 0.6499999999999999,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": -21.02629074325087,
+          "score_reattack_sample_growth": -21.02629074325087,
           "stable_shared_bin": 0.9412044786681372,
-          "score_reattack_s090": -14.63030283488987
+          "score_reattack_adaptive_attack": -21.02629074325087
         },
         "candidate_vs_stable_rms_db": -1.0140014348893616,
+        "sample_growth_vs_stable_rms_db": -1.0140014348893616,
+        "sample_growth_vs_adaptive_rms_db": 0.0,
         "comparison_window_sec": [
           0.6699999999999999,
           1.0499999999999998
@@ -116,11 +130,13 @@
         "pitch": 56,
         "event_offset_sec": 0.6499999999999999,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": 8.962176944361136,
+          "score_reattack_sample_growth": 8.962176944361136,
           "stable_shared_bin": 8.395141866883565,
-          "score_reattack_s090": 8.395141866883565
+          "score_reattack_adaptive_attack": 8.962176944361136
         },
         "candidate_vs_stable_rms_db": 1.6994415072687334,
+        "sample_growth_vs_stable_rms_db": 1.6994415072687334,
+        "sample_growth_vs_adaptive_rms_db": 0.0,
         "comparison_window_sec": [
           0.6699999999999999,
           1.0499999999999998
@@ -131,11 +147,13 @@
         "pitch": 52,
         "event_offset_sec": 0.18000000000000016,
         "event_jump_db": {
-          "score_reattack_adaptive_attack": 7.580058732799479,
+          "score_reattack_sample_growth": 7.580058732799479,
           "stable_shared_bin": 7.580058732799479,
-          "score_reattack_s090": 7.580058732799479
+          "score_reattack_adaptive_attack": 7.580058732799479
         },
         "candidate_vs_stable_rms_db": 0.0,
+        "sample_growth_vs_stable_rms_db": 0.0,
+        "sample_growth_vs_adaptive_rms_db": 0.0,
         "comparison_window_sec": [
           0.20000000000000015,
           0.5800000000000002
