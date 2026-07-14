@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DNA | Real MAESTRO separator audit</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #17202a; background: #f5f6f7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .topbar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px max(20px, calc((100vw - 1180px) / 2)); background: rgba(255,255,255,.96); border-bottom: 1px solid #d7dce0; }
+    h1 { margin: 0; font-size: 20px; letter-spacing: 0; }
+    button { border: 1px solid #263238; background: #263238; color: white; padding: 9px 13px; border-radius: 5px; font-weight: 650; cursor: pointer; }
+    main { max-width: 1180px; margin: 0 auto; background: white; border-left: 1px solid #e0e3e5; border-right: 1px solid #e0e3e5; }
+    .intro { padding: 22px 26px; border-bottom: 1px solid #dfe3e6; color: #43515a; }
+    .intro strong { color: #17202a; }
+    .case-band { padding: 26px; border-bottom: 8px solid #f5f6f7; }
+    .case-band > header { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 24px; align-items: end; padding-bottom: 20px; }
+    h2 { margin: 2px 0 6px; font-size: 19px; letter-spacing: 0; }
+    h3 { margin: 0; font-size: 15px; letter-spacing: 0; }
+    p { margin: 4px 0; line-height: 1.45; }
+    .eyebrow { text-transform: uppercase; font-size: 11px; font-weight: 750; color: #59717d; }
+    .mix, .variant label { display: grid; gap: 5px; font-size: 12px; font-weight: 650; color: #4c5b63; }
+    audio { width: 100%; min-width: 0; height: 36px; }
+    .note-band { border-top: 1px solid #dfe3e6; padding: 20px 0; }
+    .note-title { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; margin-bottom: 10px; }
+    .note-title span { color: #64727a; font-size: 12px; }
+    .note-band img { display: block; width: 100%; height: auto; border: 1px solid #dfe3e6; }
+    .variant-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+    .variant { display: grid; gap: 9px; border: 1px solid #d7dde0; border-radius: 6px; padding: 12px; background: #fbfcfc; min-width: 0; }
+    .identity { display: none; color: #0f6b3e; font-size: 12px; font-weight: 750; }
+    body.revealed .identity { display: block; }
+    @media (max-width: 800px) {
+      .case-band > header, .variant-grid { grid-template-columns: 1fr; }
+      .note-title { display: block; }
+      .case-band { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><h1>DNA | Real MAESTRO separator audit</h1><button id="reveal" type="button">Reveal identities</button></div>
+  <main>
+    <div class="intro"><strong>3 held-out validation performances.</strong> These are aligned real recordings, so there is no isolated-note ground truth. Raw outputs preserve separator level; RMS-matched outputs isolate timbre and leakage differences. The dashed line marks the score event.</div>
+    
+    <section class="case-band">
+      <header>
+        <div>
+          <p class="eyebrow">2015 | validation | 13 notes in crop</p>
+          <h2>Franz Liszt: Hungarian Rhapsody No. 2 in C-sharp Minor, S. 244/2</h2>
+          <p>Lower MIDI 44 reattacks at 1.750 s while upper MIDI 56 sustains.</p>
+        </div>
+        <label class="mix">Mixture context <audio controls preload="none" src="audio/case_01_2015_p44/mixture_context.wav"></audio></label>
+      </header>
+      
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Sustained upper-octave target</h3>
+          <span>MIDI 56 | score interval 0.491-4.500 s</span>
+        </div>
+        <img src="plots/case_01_2015_p44/sustained_upper.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/sustained_upper/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/sustained_upper/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/sustained_upper/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/sustained_upper/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/sustained_upper/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/sustained_upper/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Reattacking lower note</h3>
+          <span>MIDI 44 | score interval 1.750-4.500 s</span>
+        </div>
+        <img src="plots/case_01_2015_p44/reattacking_lower.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/reattacking_lower/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/reattacking_lower/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/reattacking_lower/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/reattacking_lower/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/reattacking_lower/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/reattacking_lower/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Nearby control note</h3>
+          <span>MIDI 49 | score interval 1.751-2.459 s</span>
+        </div>
+        <img src="plots/case_01_2015_p44/nearby_control.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/nearby_control/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/nearby_control/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/nearby_control/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/nearby_control/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_01_2015_p44/nearby_control/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_01_2015_p44/nearby_control/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+    </section>
+    
+    <section class="case-band">
+      <header>
+        <div>
+          <p class="eyebrow">2008 | validation | 16 notes in crop</p>
+          <h2>Franz Liszt / Vladimir Horowitz: Hungarian Rhapsody No. 2 (Horowitz Edition)</h2>
+          <p>Lower MIDI 49 reattacks at 1.750 s while upper MIDI 61 sustains.</p>
+        </div>
+        <label class="mix">Mixture context <audio controls preload="none" src="audio/case_02_2008_p49/mixture_context.wav"></audio></label>
+      </header>
+      
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Sustained upper-octave target</h3>
+          <span>MIDI 61 | score interval 0.284-2.418 s</span>
+        </div>
+        <img src="plots/case_02_2008_p49/sustained_upper.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/sustained_upper/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/sustained_upper/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/sustained_upper/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/sustained_upper/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/sustained_upper/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/sustained_upper/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Reattacking lower note</h3>
+          <span>MIDI 49 | score interval 1.750-1.957 s</span>
+        </div>
+        <img src="plots/case_02_2008_p49/reattacking_lower.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/reattacking_lower/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/reattacking_lower/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/reattacking_lower/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/reattacking_lower/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/reattacking_lower/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/reattacking_lower/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Nearby control note</h3>
+          <span>MIDI 56 | score interval 1.753-2.301 s</span>
+        </div>
+        <img src="plots/case_02_2008_p49/nearby_control.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/nearby_control/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/nearby_control/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/nearby_control/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/nearby_control/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_02_2008_p49/nearby_control/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_02_2008_p49/nearby_control/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+    </section>
+    
+    <section class="case-band">
+      <header>
+        <div>
+          <p class="eyebrow">2011 | validation | 27 notes in crop</p>
+          <h2>Franz Liszt: Hungarian Rhapsody No. 12, S. 244/12</h2>
+          <p>Lower MIDI 56 reattacks at 1.750 s while upper MIDI 68 sustains.</p>
+        </div>
+        <label class="mix">Mixture context <audio controls preload="none" src="audio/case_03_2011_p56/mixture_context.wav"></audio></label>
+      </header>
+      
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Sustained upper-octave target</h3>
+          <span>MIDI 68 | score interval 0.798-2.091 s</span>
+        </div>
+        <img src="plots/case_03_2011_p56/sustained_upper.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/sustained_upper/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/sustained_upper/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/sustained_upper/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/sustained_upper/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/sustained_upper/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/sustained_upper/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Reattacking lower note</h3>
+          <span>MIDI 56 | score interval 1.750-1.842 s</span>
+        </div>
+        <img src="plots/case_03_2011_p56/reattacking_lower.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/reattacking_lower/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/reattacking_lower/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/reattacking_lower/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/reattacking_lower/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/reattacking_lower/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/reattacking_lower/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+      <div class="note-band">
+        <div class="note-title">
+          <h3>Nearby control note</h3>
+          <span>MIDI 52 | score interval 2.697-3.167 s</span>
+        </div>
+        <img src="plots/case_03_2011_p56/nearby_control.png" alt="Amplitude envelopes for the three separator variants">
+        <div class="variant-grid">
+            <div class="variant">
+              <strong>Variant A</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/nearby_control/A_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/nearby_control/A_matched.wav"></audio></label>
+              <span class="identity" data-identity>Adaptive score-reattack ownership with octave aliasing</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant B</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/nearby_control/B_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/nearby_control/B_matched.wav"></audio></label>
+              <span class="identity" data-identity>Promoted shared-bin separator</span>
+            </div>
+            
+            <div class="variant">
+              <strong>Variant C</strong>
+              <label>Raw <audio controls preload="none" src="audio/case_03_2011_p56/nearby_control/C_raw.wav"></audio></label>
+              <label>RMS-matched <audio controls preload="none" src="audio/case_03_2011_p56/nearby_control/C_matched.wav"></audio></label>
+              <span class="identity" data-identity>Score-reattack gate 0.90 to residual</span>
+            </div>
+            </div>
+      </div>
+    
+    </section>
+    
+  </main>
+  <script>
+    document.getElementById('reveal').addEventListener('click', function () {
+      document.body.classList.toggle('revealed');
+      this.textContent = document.body.classList.contains('revealed') ? 'Hide identities' : 'Reveal identities';
+    });
+  </script>
+</body>
+</html>

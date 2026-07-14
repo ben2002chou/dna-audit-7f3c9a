@@ -1,0 +1,60 @@
+{
+  "variant_order": [
+    "score_reattack_adaptive_attack",
+    "stable_shared_bin",
+    "score_reattack_s090"
+  ],
+  "cases": {
+    "case_01_2015_p44": {
+      "sustained_upper": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      },
+      "reattacking_lower": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      },
+      "nearby_control": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      }
+    },
+    "case_02_2008_p49": {
+      "sustained_upper": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      },
+      "reattacking_lower": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      },
+      "nearby_control": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      }
+    },
+    "case_03_2011_p56": {
+      "sustained_upper": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      },
+      "reattacking_lower": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      },
+      "nearby_control": {
+        "A": "Adaptive score-reattack ownership with octave aliasing",
+        "B": "Promoted shared-bin separator",
+        "C": "Score-reattack gate 0.90 to residual"
+      }
+    }
+  }
+}

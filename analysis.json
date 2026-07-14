@@ -1,0 +1,146 @@
+{
+  "schema": "dna_maestro_real_qualitative_analysis_v1",
+  "cases": {
+    "case_01_2015_p44": {
+      "sustained_upper": {
+        "note_index": 4,
+        "pitch": 56,
+        "event_offset_sec": 0.6499999999999999,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": -5.914680735535509,
+          "stable_shared_bin": 3.4250126482896084,
+          "score_reattack_s090": -4.762300152819552
+        },
+        "candidate_vs_stable_rms_db": -10.706079097590687,
+        "comparison_window_sec": [
+          0.6699999999999999,
+          1.0499999999999998
+        ]
+      },
+      "reattacking_lower": {
+        "note_index": 8,
+        "pitch": 44,
+        "event_offset_sec": 0.6499999999999999,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": 10.377525491411188,
+          "stable_shared_bin": 9.311250496010036,
+          "score_reattack_s090": 9.311250496010036
+        },
+        "candidate_vs_stable_rms_db": 3.587846130352869,
+        "comparison_window_sec": [
+          0.6699999999999999,
+          1.0499999999999998
+        ]
+      },
+      "nearby_control": {
+        "note_index": 9,
+        "pitch": 49,
+        "event_offset_sec": 0.17999999999999994,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": 11.229525072587627,
+          "stable_shared_bin": 11.229525072587627,
+          "score_reattack_s090": 11.229525072587627
+        },
+        "candidate_vs_stable_rms_db": 0.0,
+        "comparison_window_sec": [
+          0.19999999999999993,
+          0.58
+        ]
+      }
+    },
+    "case_02_2008_p49": {
+      "sustained_upper": {
+        "note_index": 2,
+        "pitch": 61,
+        "event_offset_sec": 0.6499999999999999,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": -1.4532513704684902,
+          "stable_shared_bin": 1.929762340237209,
+          "score_reattack_s090": 1.929762340237209
+        },
+        "candidate_vs_stable_rms_db": 0.0,
+        "comparison_window_sec": [
+          0.6699999999999999,
+          1.0499999999999998
+        ]
+      },
+      "reattacking_lower": {
+        "note_index": 8,
+        "pitch": 49,
+        "event_offset_sec": 0.6499999999999999,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": 8.688313293187502,
+          "stable_shared_bin": 8.732810992656109,
+          "score_reattack_s090": 8.732810992656109
+        },
+        "candidate_vs_stable_rms_db": 0.0,
+        "comparison_window_sec": [
+          0.6699999999999999,
+          1.0499999999999998
+        ]
+      },
+      "nearby_control": {
+        "note_index": 9,
+        "pitch": 56,
+        "event_offset_sec": 0.17999999999999994,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": 32.17612008193653,
+          "stable_shared_bin": 32.17612008193653,
+          "score_reattack_s090": 32.17612008193653
+        },
+        "candidate_vs_stable_rms_db": 0.0,
+        "comparison_window_sec": [
+          0.19999999999999993,
+          0.58
+        ]
+      }
+    },
+    "case_03_2011_p56": {
+      "sustained_upper": {
+        "note_index": 5,
+        "pitch": 68,
+        "event_offset_sec": 0.6499999999999999,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": -21.02629074325087,
+          "stable_shared_bin": 0.9412044786681372,
+          "score_reattack_s090": -14.63030283488987
+        },
+        "candidate_vs_stable_rms_db": -1.0140014348893616,
+        "comparison_window_sec": [
+          0.6699999999999999,
+          1.0499999999999998
+        ]
+      },
+      "reattacking_lower": {
+        "note_index": 13,
+        "pitch": 56,
+        "event_offset_sec": 0.6499999999999999,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": 8.962176944361136,
+          "stable_shared_bin": 8.395141866883565,
+          "score_reattack_s090": 8.395141866883565
+        },
+        "candidate_vs_stable_rms_db": 1.6994415072687334,
+        "comparison_window_sec": [
+          0.6699999999999999,
+          1.0499999999999998
+        ]
+      },
+      "nearby_control": {
+        "note_index": 21,
+        "pitch": 52,
+        "event_offset_sec": 0.18000000000000016,
+        "event_jump_db": {
+          "score_reattack_adaptive_attack": 7.580058732799479,
+          "stable_shared_bin": 7.580058732799479,
+          "score_reattack_s090": 7.580058732799479
+        },
+        "candidate_vs_stable_rms_db": 0.0,
+        "comparison_window_sec": [
+          0.20000000000000015,
+          0.5800000000000002
+        ]
+      }
+    }
+  }
+}
