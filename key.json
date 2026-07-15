@@ -1,59 +1,59 @@
 {
   "variant_order": [
-    "score_reattack_sample_growth",
+    "score_reattack_sample_stronger",
     "stable_shared_bin",
-    "score_reattack_adaptive_attack"
+    "score_reattack_sample_growth"
   ],
   "cases": {
     "case_01_2015_p44": {
       "sustained_upper": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       },
       "reattacking_lower": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       },
       "nearby_control": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       }
     },
     "case_02_2008_p49": {
       "sustained_upper": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       },
       "reattacking_lower": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       },
       "nearby_control": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       }
     },
     "case_03_2011_p56": {
       "sustained_upper": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       },
       "reattacking_lower": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       },
       "nearby_control": {
-        "A": "Frame-local onset-growth reconstruction ownership",
+        "A": "Stronger onset-growth reconstruction ownership",
         "B": "Promoted shared-bin separator",
-        "C": "Adaptive score-reattack ownership with octave aliasing"
+        "C": "Frame-local onset-growth reconstruction ownership"
       }
     }
   }
